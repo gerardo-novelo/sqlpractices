@@ -1,0 +1,7 @@
+// SQL Keys
+
+1. Primary Keys // Must be unique and not null
+
+2. Foreign Keys // Must exist in the foreign table
+
+3. Check / Check In // These are values where you can validate if the data exist and is correct
