@@ -1,0 +1,40 @@
+// Operations in sql
+
+1. Basic Operations
+SELECT 5 + 2;    // addition 
+SELECT 15 - 2;    // subtraction
+SELECT 6 * 8;   //multiplication
+
+2. Divisions
+SELECT 22 / 3;     //Integer Division
+SELCT 22 % 3;      //module division
+SELECT 22.5 / 3;    //decimal division
+
+3. Exponents, roots and factorials
+SELECT 3 ^ 4;       // exponential
+SELECT |/ 3;        // square root (operator)
+SELECT sqrt(5);     // square root (function)
+SELECT ||/ 10;      // cube root
+SELECT factorial(6)    //factorial
+
+4. Percentile function
+CREATE TABLE percentile_test (
+  numbers integer
+);
+
+INSERT INTO percentile_test (numbers) VALUES
+  (1), (2), (3), (4), (5), (6);
+  
+SELECT
+  percentile_cont(.5)
+  WITHIN GROUP (ORDER BY numbers),
+  percentile_disc(.5)
+  WITHIN GROUP (ORDER BY numbers)
+FROM percentile_test;
+
+5. Average
+SELECT sum(pop_est_2019) AS county_sum,
+       round(avg(pop_est_2019), 0) AS county_average,
+       percentile_cont(.5)
+       WITHIN GROUP (ORDER BY pop_est_2019) AS county_median
+FROM us_counties_pop_est_2019;
