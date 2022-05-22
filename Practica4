@@ -1,0 +1,15 @@
+// Table Joins
+
+1. Columns
+Inner Join // the values that follow the condition
+Left Join // the values that follow the conditon and all the values of the left table
+Right Join // the values that follow the conditon and all the values of the right table
+Full Outer Join // all the values of the two tables
+Cross Join // all the posible combination avoiding nulls
+
+
+2. Rows
+2.1 Union // combines the unique queries of two tables
+2.2 Union All // combines all the queries of two tables
+2.3 Intersect: all the elements that intersect of two tables
+2.4 Except: Elements that are exclusive to the first table
